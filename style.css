@@ -1,0 +1,117 @@
+/* ====== Estilos generales ====== */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #fff0f5; /* Rosa lavanda */
+  margin: 0;
+  padding: 0;
+}
+
+/* ====== Encabezado ====== */
+#encabezado {
+  text-align: center;
+  background: linear-gradient(90deg, #ff9aa2, #ffb7b2, #ffdac1);
+  color: white;
+  padding: 25px;
+  border-bottom: 6px solid #ff8fab;
+}
+
+.subtitulo {
+  font-size: 14px;
+  font-style: italic;
+  color: #ffe5ec;
+}
+
+
+/* ====== Lista de tareas ====== */
+.tareas {
+  list-style: none;
+  padding: 0;
+  max-width: 450px;
+  margin: 30px auto;
+}
+
+/* Cada tarea */
+.tareas li {
+  background: white;
+  margin: 12px 0;
+  padding: 14px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(255, 105, 180, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Hover animado */
+.tareas li:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #ffb7b2, #ffe0ac);
+  color: #5a189a;
+  box-shadow: 0 6px 12px rgba(255, 105, 180, 0.4);
+}
+
+/* Alternar colores */
+.tareas li:nth-child(even) {
+  background: #fff5f7;
+}
+
+/* Primera y última */
+.tareas li:first-child {
+  border-left: 6px solid #ff69b4;
+}
+
+.tareas li:last-child {
+  border-left: 6px solid #c77dff;
+}
+
+/* ====== Tareas completadas ====== */
+.completada {
+  text-decoration: line-through;
+  color: gray;
+  opacity: 0.7;
+  position: relative;
+}
+
+.completada::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background: #ff69b4;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.completada:hover::after {
+  transform: scaleX(1); /* Animación del tachado */
+}
+
+/* ====== Botón agregar ====== */
+#agregar {
+  display: block;
+  margin: 20px auto;
+  padding: 14px 28px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #ff8fab, #ffc8dd, #ffafcc);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(255, 105, 180, 0.3);
+  transition: all 0.3s ease;
+}
+
+#agregar:hover {
+  background: linear-gradient(90deg, #ff5d8f, #ff80ab, #ff9aa2);
+  box-shadow: 0 0 12px #ff8fab, 0 0 24px #ffc8dd;
+  transform: translateY(-2px);
+}
+
+.tareas li::before {
+  content: " ";
+  color: #ff69b4;
+  font-weight: bold;
+}
