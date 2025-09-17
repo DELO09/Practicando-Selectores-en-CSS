@@ -1,28 +1,27 @@
-/* ====== Estilos generales ====== */
+/* Estilos generales */
 body {
   font-family: "Segoe UI", sans-serif;
-  background: #fff0f5; /* Rosa lavanda */
+  background: rgba (255, 240, 245, 1); /* Rosa lavanda */
   margin: 0;
   padding: 0;
 }
 
-/* ====== Encabezado ====== */
+/*Encabezado */
 #encabezado {
   text-align: center;
   background: linear-gradient(90deg, #ff9aa2, #ffb7b2, #ffdac1);
   color: white;
   padding: 25px;
-  border-bottom: 6px solid #ff8fab;
+  border-bottom: 6px solid rgba (255, 143, 171, 1);
 }
 
 .subtitulo {
   font-size: 14px;
   font-style: italic;
-  color: #ffe5ec;
+  color: rgba (255, 229, 236, 1);
 }
 
-
-/* ====== Lista de tareas ====== */
+/*Lista de tareas*/
 .tareas {
   list-style: none;
   padding: 0;
@@ -45,50 +44,25 @@ body {
 .tareas li:hover {
   transform: scale(1.05);
   background: linear-gradient(90deg, #ffb7b2, #ffe0ac);
-  color: #5a189a;
+  color: rgba (90, 24, 154, 1);
   box-shadow: 0 6px 12px rgba(255, 105, 180, 0.4);
 }
 
 /* Alternar colores */
 .tareas li:nth-child(even) {
-  background: #fff5f7;
+  background: rgba (255, 245, 247, 1);
 }
 
 /* Primera y última */
 .tareas li:first-child {
-  border-left: 6px solid #ff69b4;
+  border-left: 6px solid rgba (255, 105, 180, 1);
 }
 
 .tareas li:last-child {
-  border-left: 6px solid #c77dff;
+  border-left: 6px solid rgba (199, 125, 255, 1);
 }
 
-/* ====== Tareas completadas ====== */
-.completada {
-  text-decoration: line-through;
-  color: gray;
-  opacity: 0.7;
-  position: relative;
-}
-
-.completada::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  height: 2px;
-  background: #ff69b4;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.4s ease;
-}
-
-.completada:hover::after {
-  transform: scaleX(1); /* Animación del tachado */
-}
-
-/* ====== Botón agregar ====== */
+/* Botón agregar */
 #agregar {
   display: block;
   margin: 20px auto;
@@ -112,6 +86,6 @@ body {
 
 .tareas li::before {
   content: " ";
-  color: #ff69b4;
-  font-weight: bold;
+  color: rgba (255, 105, 180, 1);
+  font-weight:bold;
 }
